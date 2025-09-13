@@ -1,9 +1,18 @@
-streamlit
-langchain>=0.2
-langchain-community>=0.2
-langchain-core>=0.2
-langchain-google-genai
-langchain-text-splitters
-numpy
-pypdf
-chromadb>=0.4.5
+# Streamlit for web app
+streamlit>=1.26.0
+
+# LangChain packages
+langchain>=0.2.0
+langchain-community>=0.2.0
+langchain-core>=0.2.0
+langchain-google-genai>=0.1.0
+langchain-text-splitters>=0.1.0
+
+# PDF parsing
+pypdf>=3.14.0
+
+# Numerical computing
+numpy>=1.26.0
+
+# Chroma vector store
+chromadb==0.4.7
