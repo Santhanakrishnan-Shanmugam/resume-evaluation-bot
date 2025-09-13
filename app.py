@@ -8,7 +8,7 @@ from langchain_core.documents import Document
 import asyncio
 from langchain_text_splitters import RecursiveCharacterTextSplitter
 from langchain_google_genai import GoogleGenerativeAIEmbeddings
-from langchain_postgres import PGVector
+
 import os
 from langchain_google_genai import ChatGoogleGenerativeAI
 from langchain_core.prompts import ChatPromptTemplate
@@ -83,7 +83,7 @@ if st.button("🚀 Evaluate Resume", use_container_width=True):
             st.stop()
         
         # Embedding model
-        os.environ["GOOGLE_API_KEY"] = "AIzaSyB49t1RsKBrFM5NHM-M3O6pl4ljA8U4_60"
+        os.environ["GOOGLE_API_KEY"] = st.secrets["GOOGLE_API_KEY"]
         model = GoogleGenerativeAIEmbeddings(
             model="models/gemini-embedding-001",
             timeout=120
