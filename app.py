@@ -15,7 +15,7 @@ from langchain_core.prompts import ChatPromptTemplate
 from langchain_core.runnables import chain
 import streamlit as st
 import tempfile
-from langchain_community.vectorstores import Chroma
+from langchain_community.vectorstores import FAISS 
 
 
 # Handle asyncio loop for Streamlit
@@ -94,10 +94,10 @@ if st.button("🚀 Evaluate Resume", use_container_width=True):
 
         # Vector DB
         current=os.getcwd()
-        db = Chroma.from_documents(
-            doc,
-            model,
-            persist_directory=None
+        db = FAISS.from_documents(
+            documents=doc,
+            embedding=model
+            
         )
 
         '''
