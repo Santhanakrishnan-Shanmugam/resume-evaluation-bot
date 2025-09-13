@@ -97,7 +97,7 @@ if st.button("🚀 Evaluate Resume", use_container_width=True):
         db = Chroma.from_documents(
             doc,
             model,
-            persist_directory=os.path.join(current, "chroma_db")
+            persist_directory=None
         )
 
         '''
