@@ -15,7 +15,8 @@ from langchain_core.prompts import ChatPromptTemplate
 from langchain_core.runnables import chain
 import streamlit as st
 import tempfile
-from langchain_chroma import Chroma
+from langchain_community.vectorstores import Chroma
+
 
 # Handle asyncio loop for Streamlit
 try:
